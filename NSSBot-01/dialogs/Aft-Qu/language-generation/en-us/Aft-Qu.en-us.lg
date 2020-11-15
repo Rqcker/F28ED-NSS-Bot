@@ -1,0 +1,22 @@
+[import](common.lg)
+
+# SendActivity_likJyA()
+- Thank you for completing the experiment, please fill out the questionnaire
+
+
+
+
+
+
+
+
+# TextInput_Prompt_3revec()
+- Which type of news do you prefer?  [Traditional news] or [News based on user interests], [Choose an option.]
+
+
+# SendActivity_0MNKsa()
+- Sorry you entered incorrectly
+# SendActivity_C7mr8G()
+- The questionnaire has been completed, you have chosen [Traditional news]
+# SendActivity_olEz7r()
+- The questionnaire has been completed, you have chosen [News based on user interests]

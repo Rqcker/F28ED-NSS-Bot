@@ -1,0 +1,50 @@
+[import](common.lg)
+
+
+# SendActivity_JUPO5a()
+- Welcome to NSS Bot !
+# SendActivity_GDLVJX()
+- The experiment will consist of two parts. The first part requires subjects to read two kinds of news. In the second part, the subjects need to choose the type of news they like (choose one).The experiment is completely ethical. Will not disclose any data of the subject. We will strictly keep personal information confidential.
+
+
+
+
+# TextInput_Prompt_KmFfeI()
+- Do you agree to participate in the experiment (Yes/No) ?
+# SendActivity_uDvM36()
+- Please do a small questionnaire (a total of five questions) before the experiment.
+# SendActivity_ZRDKbb()
+- Thank you for coming. Have a nice day. Goodbye.
+# SendActivity_fgbNYB()
+- So far this experiment is completely over. Thank you for coming. Have a nice day. Goodbye.
+
+
+# SendActivity_3KNYMj()
+- Thank you for completing the experiment, please fill out the questionnaire
+
+
+
+
+
+
+
+
+# TextInput_Prompt_ARrrtd()
+- Which type of news do you prefer?  [Traditional news] or [News based on user interests], [Choose an option.]
+
+
+# SendActivity_dKFVjV()
+- Sorry you entered incorrectly
+# SendActivity_WFCCWp()
+- The questionnaire has been completed, you have chosen [Traditional news]
+
+# ChoiceInput_Prompt_5gP0s8()
+-What is your age?
+# ChoiceInput_Prompt_lmvu2a()
+-What is your gender?
+# ChoiceInput_Prompt_UHDcdg()
+-What is your highest degree?
+# ChoiceInput_Prompt_wocIiv()
+-Are you currently working or studying at school? 
+# ChoiceInput_Prompt_W1I0Zm()
+-Do you have the habit of reading news?

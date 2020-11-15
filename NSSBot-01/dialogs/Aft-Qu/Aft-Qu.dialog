@@ -1,0 +1,116 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "qzvBZK",
+    "name": "Aft-Qu",
+    "description": "After-Questionnaire"
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "AVHmmi"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "KPjIJH",
+            "name": "Branch: if/else"
+          },
+          "condition": "string(dialog.foreach.value.id) != string(turn.Activity.Recipient.id)",
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "likJyA"
+              },
+              "activity": "${SendActivity_likJyA()}"
+            },
+            {
+              "$kind": "Microsoft.IfCondition",
+              "$designer": {
+                "id": "qKHTNU"
+              },
+              "condition": "user.answer==null",
+              "actions": [
+                {
+                  "$kind": "Microsoft.TextInput",
+                  "$designer": {
+                    "id": "3revec"
+                  },
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "prompt": "${TextInput_Prompt_3revec()}",
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "property": "user.answer"
+                },
+                {
+                  "$kind": "Microsoft.SwitchCondition",
+                  "$designer": {
+                    "id": "ofQtZ7"
+                  },
+                  "cases": [
+                    {
+                      "value": "Traditional news",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "C7mr8G"
+                          },
+                          "activity": "${SendActivity_C7mr8G()}"
+                        }
+                      ]
+                    },
+                    {
+                      "value": "News based on user interests",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "olEz7r"
+                          },
+                          "activity": "${SendActivity_olEz7r()}"
+                        }
+                      ]
+                    }
+                  ],
+                  "condition": "user.answer",
+                  "default": [
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "0MNKsa"
+                      },
+                      "activity": "${SendActivity_0MNKsa()}"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "J2Eiuk"
+          },
+          "activityProcessed": true,
+          "dialog": "Ending"
+        }
+      ]
+    }
+  ],
+  "generator": "Aft-Qu.lg",
+  "recognizer": "Aft-Qu.lu.qna",
+  "id": "Aft-Qu"
+}
