@@ -136,117 +136,6 @@
       ]
     },
     {
-      "$kind": "Microsoft.OnQnAMatch",
-      "$designer": {
-        "id": "00Etnh"
-      },
-      "actions": [
-        {
-          "$kind": "Microsoft.Foreach",
-          "$designer": {
-            "id": "XHIFnB",
-            "name": "Loop: for each item"
-          },
-          "itemsProperty": "turn.Activity.membersAdded",
-          "actions": [
-            {
-              "$kind": "Microsoft.IfCondition",
-              "$designer": {
-                "id": "QLaPyu",
-                "name": "Branch: if/else"
-              },
-              "condition": "string(dialog.foreach.value.id) != string(turn.Activity.Recipient.id)",
-              "actions": [
-                {
-                  "$kind": "Microsoft.SendActivity",
-                  "$designer": {
-                    "id": "3KNYMj"
-                  },
-                  "activity": "${SendActivity_3KNYMj()}"
-                },
-                {
-                  "$kind": "Microsoft.IfCondition",
-                  "$designer": {
-                    "id": "EOnSQa"
-                  },
-                  "condition": "user.answer==null",
-                  "actions": [
-                    {
-                      "$kind": "Microsoft.TextInput",
-                      "$designer": {
-                        "id": "ARrrtd"
-                      },
-                      "disabled": false,
-                      "maxTurnCount": 3,
-                      "alwaysPrompt": false,
-                      "allowInterruptions": false,
-                      "prompt": "${TextInput_Prompt_ARrrtd()}",
-                      "unrecognizedPrompt": "",
-                      "invalidPrompt": "",
-                      "defaultValueResponse": "",
-                      "property": "user.answer"
-                    },
-                    {
-                      "$kind": "Microsoft.SwitchCondition",
-                      "$designer": {
-                        "id": "XchVpV"
-                      },
-                      "cases": [
-                        {
-                          "value": "Traditional news",
-                          "actions": [
-                            {
-                              "$kind": "Microsoft.SendActivity",
-                              "$designer": {
-                                "id": "WFCCWp"
-                              },
-                              "activity": "${SendActivity_WFCCWp()}"
-                            }
-                          ]
-                        },
-                        {
-                          "value": "News based on user interests",
-                          "actions": [
-                            {
-                              "$kind": "Microsoft.SendActivity",
-                              "$designer": {
-                                "id": "DpIJ3e"
-                              },
-                              "activity": "${SendActivity_DpIJ3e()}"
-                            }
-                          ]
-                        }
-                      ],
-                      "condition": "user.answer",
-                      "default": [
-                        {
-                          "$kind": "Microsoft.SendActivity",
-                          "$designer": {
-                            "id": "dKFVjV"
-                          },
-                          "activity": "${SendActivity_dKFVjV()}"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "value": "dialog.foreach.value",
-          "index": "dialog.foreach.index"
-        },
-        {
-          "$kind": "Microsoft.BeginDialog",
-          "$designer": {
-            "id": "EdfmI7"
-          },
-          "activityProcessed": true,
-          "dialog": "Ending"
-        }
-      ]
-    },
-    {
       "$kind": "Microsoft.OnActivity",
       "$designer": {
         "id": "70UkZ3"
@@ -386,10 +275,36 @@
           "property": "user.habit"
         }
       ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "KrHDWS",
+        "name": "startTelegram"
+      },
+      "intent": "startTelegram",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "JgzvCQ"
+          },
+          "activityProcessed": true,
+          "dialog": "Greeting"
+        }
+      ]
     }
   ],
   "$schema": "https://raw.githubusercontent.com/microsoft/BotFramework-Composer/stable/Composer/packages/server/schemas/sdk.schema",
   "generator": "nssbot-01.lg",
   "id": "NSSBot-01",
-  "recognizer": "nssbot-01.lu.qna"
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": [
+      {
+        "intent": "startTelegram",
+        "pattern": "\\/start"
+      }
+    ]
+  }
 }
