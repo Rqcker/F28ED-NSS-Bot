@@ -161,6 +161,9 @@
     }
   ],
   "generator": "Pre-Qu.lg",
-  "recognizer": "Pre-Qu.lu.qna",
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": []
+  },
   "id": "Pre-Qu"
 }

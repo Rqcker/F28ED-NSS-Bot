@@ -33,6 +33,9 @@
     }
   ],
   "generator": "Ending.lg",
-  "recognizer": "Ending.lu.qna",
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": []
+  },
   "id": "Ending"
 }
