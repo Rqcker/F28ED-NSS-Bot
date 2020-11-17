@@ -111,9 +111,6 @@
     }
   ],
   "generator": "Aft-Qu.lg",
-  "recognizer": {
-    "$kind": "Microsoft.RegexRecognizer",
-    "intents": []
-  },
+  "recognizer": "Aft-Qu.lu.qna",
   "id": "Aft-Qu"
 }
