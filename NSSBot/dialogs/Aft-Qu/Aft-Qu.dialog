@@ -1,0 +1,72 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "qzvBZK",
+    "name": "Aft-Qu",
+    "description": "After-Questionnaire"
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "AVHmmi"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "KPjIJH",
+            "name": "Branch: if/else"
+          },
+          "condition": "string(dialog.foreach.value.id) != string(turn.Activity.Recipient.id)",
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "likJyA"
+              },
+              "activity": "${SendActivity_likJyA()}"
+            },
+            {
+              "$kind": "Microsoft.ChoiceInput",
+              "$designer": {
+                "id": "yb80tu"
+              },
+              "defaultLocale": "en-us",
+              "disabled": false,
+              "maxTurnCount": 3,
+              "alwaysPrompt": false,
+              "allowInterruptions": false,
+              "prompt": "${ChoiceInput_Prompt_yb80tu()}",
+              "unrecognizedPrompt": "",
+              "invalidPrompt": "",
+              "defaultValueResponse": "",
+              "choiceOptions": {
+                "includeNumbers": true,
+                "inlineOrMore": ", or "
+              },
+              "choices": [
+                "I finished"
+              ]
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "J2Eiuk"
+          },
+          "activityProcessed": true,
+          "dialog": "Ending"
+        }
+      ]
+    }
+  ],
+  "generator": "Aft-Qu.lg",
+  "recognizer": "Aft-Qu.lu.qna",
+  "id": "Aft-Qu"
+}

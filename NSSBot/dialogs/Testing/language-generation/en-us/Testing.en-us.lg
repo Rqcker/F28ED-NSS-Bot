@@ -1,0 +1,22 @@
+[import](common.lg)
+
+# TextInput_Prompt_ctIxa7()
+-Welcome to the test section, please enter the news you are interested in: Business, Health, Entertainment, Style or Travel. (Please note the uppercase letters.)
+# SendActivity_KgfUNp()
+- https://edition.cnn.com/business
+# SendActivity_3QACfj()
+- https://edition.cnn.com/health
+# SendActivity_2ivI3R()
+- https://edition.cnn.com/entertainment
+# SendActivity_TcKDeK()
+- https://edition.cnn.com/style
+# SendActivity_qAboks()
+- https://edition.cnn.com/travel
+# ChoiceInput_Prompt_zK7M2p()
+- Please finish reading within 5 minutes.
+# SendActivity_K5evSE()
+- Okay, let's do the second test, please click the link and read it:https://edition.cnn.com/world 
+# ChoiceInput_Prompt_P6tcQc()
+- Please finish reading within 5 minutes.
+# SendActivity_DKFwQh()
+- Oh no, wrong answer! I told you Please note the uppercase letters !

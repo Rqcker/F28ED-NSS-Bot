@@ -1,0 +1,190 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "Tpqsws",
+    "name": "Testing",
+    "description": "The Testpart of bot"
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "Jqot7z"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "ctIxa7"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "property": "user.enter",
+          "prompt": "${TextInput_Prompt_ctIxa7()}"
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "o6ymQO"
+          },
+          "condition": "user.enter",
+          "cases": [
+            {
+              "value": "Business",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "KgfUNp"
+                  },
+                  "activity": "${SendActivity_KgfUNp()}"
+                }
+              ]
+            },
+            {
+              "value": "Health",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "3QACfj"
+                  },
+                  "activity": "${SendActivity_3QACfj()}"
+                }
+              ]
+            },
+            {
+              "value": "Entertainment",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "2ivI3R"
+                  },
+                  "activity": "${SendActivity_2ivI3R()}"
+                }
+              ]
+            },
+            {
+              "value": "Style",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "TcKDeK"
+                  },
+                  "activity": "${SendActivity_TcKDeK()}"
+                }
+              ]
+            },
+            {
+              "value": "Travel",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "qAboks"
+                  },
+                  "activity": "${SendActivity_qAboks()}"
+                }
+              ]
+            }
+          ],
+          "default": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "DKFwQh"
+              },
+              "activity": "${SendActivity_DKFwQh()}"
+            },
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "O9HAuP"
+              },
+              "activityProcessed": true,
+              "dialog": "Ending"
+            },
+            {
+              "$kind": "Microsoft.EndDialog",
+              "$designer": {
+                "id": "v5g7Oq"
+              }
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "zK7M2p"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_zK7M2p()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or "
+          },
+          "choices": [
+            "I finished"
+          ]
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "K5evSE"
+          },
+          "activity": "${SendActivity_K5evSE()}"
+        },
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "P6tcQc"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_P6tcQc()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true
+          },
+          "choices": [
+            "I finished"
+          ]
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "CPbcFI"
+          },
+          "activityProcessed": true,
+          "dialog": "Aft-Qu"
+        }
+      ]
+    }
+  ],
+  "generator": "Testing.lg",
+  "recognizer": "Testing.lu.qna",
+  "id": "Testing"
+}

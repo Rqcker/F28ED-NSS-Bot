@@ -10,8 +10,7 @@
 
 
 
-# TextInput_Prompt_3revec()
-- Which type of news do you prefer?  [Traditional news] or [News based on user interests], [Choose an option.]
+
 
 
 # SendActivity_0MNKsa()
@@ -20,3 +19,5 @@
 - The questionnaire has been completed, you have chosen [Traditional news]
 # SendActivity_olEz7r()
 - The questionnaire has been completed, you have chosen [News based on user interests]
+# ChoiceInput_Prompt_yb80tu()
+- Please finish the forms:  https://forms.office.com/Pages/ResponsePage.aspx?id=8l9CbGVo30Kk245q9jSBPW9kYMfrTZBMiHMLKDpwrFRUOVdWTkREVEFLRVQyRzlQQUpSOEZaSVU2RC4u
